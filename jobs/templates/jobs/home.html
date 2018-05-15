@@ -1,6 +1,9 @@
 
 <!doctype html>
 <html lang="nl">
+
+{% load staticfiles %}
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,19 +22,19 @@
 
     <header>
      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Edwin van Eck</a>
+  <a class="navbar-brand" href="{% url 'home' %}">Edwin van Eck</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
-        <a class="nav-link" href="#">Twitter <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="http://www.geocaching.com">Geocaching <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Resume</a>
+        <a class="nav-link" href="{% static 'Edwin.van.Eck-CV3a.pdf' %}">Resume</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Blog</a>
+        <a class="nav-link" href="{% url 'allblogs' %}">Blog</a>
       </li>
     </ul>
   </div>
@@ -47,6 +50,7 @@
           <p>
             <a href="mailto:edwin.van.eck70@gmail.com" class="btn btn-primary my-2">Email Me</a>
           </p>
+		  <img src={% static 'vak2015-088.jpg'%} class="img-responsive" height="300" >
         </div>
       </section>
 
